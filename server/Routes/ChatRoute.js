@@ -1,4 +1,6 @@
 import express from 'express'
+import { createChat, findChat, userChats } from '../Controllers/ChatController';
+
 const router = express.Router()
 
 router.post('/', createChat);

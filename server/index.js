@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 
+import ChatRoute from './Routes/ChatRoute'
 
 
 // middleware
@@ -27,3 +28,6 @@ mongoose
   .then(() => app.listen(PORT, () => console.log(`Listening at Port ${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
+
+
+app.use('/chat', ChatRoute)
